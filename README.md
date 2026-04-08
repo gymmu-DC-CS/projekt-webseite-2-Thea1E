@@ -18,6 +18,8 @@ Programmieren:
 Prompt an Chatgpt um die Idee des Meerschweinchentest realistisch zu überprüfen:
 "Kann man mit javascript einen Persönlichkeitstest programmieren, wenn ja, ist es einfach für Anfänger?"
 --> Er antwortete mir, dass es eine sehr gute Idee war und gut möglich wäre.
+
+
 JavaScript:
 - Promt Chatgpt: "Erkläre mir Schritt für Schritt, wie man einen Art Personlichkeitstest mit Javascript programmiert. Der Test sollte aus mehreren Fragen bestehen und mehrere Lösungen haben."
 Ich habe mehrmals nachgefagt um auch noch abzuklären, wie man es programmiertm um mehrere Resultate möglich sind und wie die Punkteverteilung genau funktioniert. 
@@ -70,3 +72,10 @@ answers: [
     points: { typ6: 2, typ7: 1 }
   }
 ]
+
+Um die Punkte zu speichern hat Chatgpt mir diesen Code vorgeschlagen:
+let scores = {
+  extro: 0,
+  intro: 0
+};
+Ich habe den Code angepasst indem ich meine mehrere Typen reingeschreiben habe anstatt sein Beipiel mit extro und intro.

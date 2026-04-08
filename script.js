@@ -100,7 +100,7 @@ const fragen = [
      {frage: "Was machst du, wenn es jemandem in deinem Umfeld nicht so gut geht?",
         antwort: [
             {text: "Ich gehe zu Ihnen und bleibe stets an ihrer Seite, damit sie wiessen das ich für sie da bin.",
-                points: {Emmma: 3, Columbus: 2, Poppy: 1}},
+                points: {Emma: 3, Columbus: 2, Poppy: 1}},
             {text: "Ich lasse sie in Ruhe, damit sie etwas Zeit für sich haben können.",
                 points: {Phoebe: 1}},
             {text: "Ich merke wahrscheinlich gar nicht erst, dass es ihnen schlecht geht.",
@@ -108,3 +108,17 @@ const fragen = [
         ]
      }
 ];
+
+
+let scores = {
+    Columbus: 0,
+    Ella: 0,
+    Emma: 0,
+    Hazel: 0,
+    Holly: 0,
+    Lily: 0,
+    Mopsy: 0,
+    Oakley: 0,
+    Phoebe: 0,
+    Poppy: 0
+};
