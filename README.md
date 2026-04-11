@@ -79,3 +79,80 @@ let scores = {
   intro: 0
 };
 Ich habe den Code angepasst indem ich meine mehrere Typen reingeschreiben habe anstatt sein Beipiel mit extro und intro.
+Danach habe ich diesen Abschnitt zum Definieren der aktuellen Frage in meinen eigenen Worte aufgeschrieben: 
+
+let currentQuestion = 0;
+
+Der nächste Abschnitt, den ChatGPT mir gegeben hat war sehr kompliziert. Nachdem ich ihn dann verstanden haben konnte ich den Code an meine Webseite anpassen. Das war der Originalcode:
+function showQuestion() {
+
+
+  const quiz = document.getElementById("quiz");
+
+
+  quiz.innerHTML = "";
+
+  let q = questions[currentQuestion];
+
+  let questionEl = document.createElement("h2");
+  questionEl.textContent = q.question;
+
+
+  quiz.appendChild(questionEl);
+
+  q.answers.forEach(answer => {
+
+
+    let btn = document.createElement("button");
+    btn.textContent = answer.text;
+
+
+    btn.onclick = () => {
+
+     
+      for (let type in answer.points) {
+        scores[type] += answer.points[type];
+      }
+
+      
+      currentQuestion++;
+
+      
+      if (currentQuestion < questions.length) {
+        showQuestion();
+      } else {
+        showResult();
+      }
+    };
+
+    
+    quiz.appendChild(btn);
+  });
+}
+
+Beim verstehen dieses Codes ist mir aufgefallen, dass ich die Funktion ResultatAnzeigen noch nicht definiert hatte und habe deswegen dann mit der Hilfe dieses Codes das gemacht.
+function showResult() {
+
+  quiz.innerHTML = ""; 
+
+  let bestType = "";
+  let bestScore = 0;
+
+  for (let type in scores) {
+    if (scores[type] > bestScore) {
+      bestScore = scores[type];
+      bestType = type;
+    }
+  }
+
+  let resultText = document.createElement("h2");
+
+  resultText.textContent = "Du bist: " + bestType;
+
+  quiz.appendChild(resultText);
+}
+
+ Ich musste in diesem Code dann nur noch die Definiton der Varaibel quiz hinzufügen, weil die sonst jeweils nur innerhalb anderer Definitionen definiert wurde und deswegen für diese Funktion noch nicht definiert war. Ich habe quiz genau gleich definiert wie für die Funktio FrageAnzeigen, in dem ich diese Zeile hinzugefügt habe: 
+  const quiz = document.getElementById("quiz");
+Dabei habe ich jeweils immer die Id auf "quizjs" umgeändert, weil das meine Id im HTML war.
+

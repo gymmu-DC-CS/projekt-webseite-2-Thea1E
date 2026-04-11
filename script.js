@@ -1,6 +1,6 @@
 const fragen = [
     {frage: "Hast du schnell Angst?",
-        antwort: [
+        antworten: [
             {text: "Ja", 
                 points: {Oakley: 2, Poppy: 1}},
             {text: "Nein",
@@ -8,7 +8,7 @@ const fragen = [
         ]
     },
     {frage: "Bist du eine sture Person?",
-        antwort: [
+        antworten: [
             {text: "Ja",
                 points: {Lily: 1, Holly: 1, Mopsy: 1, Phoebe: 1}},
             {text: "Nein",
@@ -16,7 +16,7 @@ const fragen = [
         ]
     },
     {frage: "In der eigenen Welt sein",
-        antwort: [
+        antworten: [
             {text: "Ja",
                 points: {Lily: 1, Mopsy: 2, Oakley:1, Phoebe: 1}},
             {text: "Nein",
@@ -24,7 +24,7 @@ const fragen = [
         ]
      },
      {frage: "Bist du leicht bestechbar?",
-        antwort: [
+        antworten: [
             {text: "Ja",
                 points: {Holly: 1, Emma: 1, Ella: 1, Lily: 1, Columbus: 1, Phoebe: 1, Poppy: 1}},
             {text: "Nein",
@@ -32,7 +32,7 @@ const fragen = [
         ]
      },
      {frage: "Hast du lange Haare?",
-        antwort: [
+        antworten: [
             {text: "Ja",
                 points: {Oakley: 1, Mopsy: 1, Phoebe: 1}},
             {text: "Nein",
@@ -40,7 +40,7 @@ const fragen = [
             ]
      },
      {frage: "Hast du ein gutes Orientierungsgefühl?",
-        antwort: [
+        antworten: [
             {text: "Ja",
                 points: {Hazel: 3, Ella: 2, Holly: 1, Emma: 1}},
             {text: "Nein",
@@ -48,7 +48,7 @@ const fragen = [
         ]
      },
      {frage: "Bist du eine selbstsichere Person?",
-        antwort: [
+        antworten: [
             {text: "Ja",
                 points: {Columbus: 1, Holly: 1}},
             {text: "Nein",
@@ -56,7 +56,7 @@ const fragen = [
         ]
      },
      {frage: "Sind deine Emotionen anhand deiner Gesichtsausdrücke gut erkennbar?",
-        antwort: [
+        antworten: [
             {text: "Ja",
                 points: {Holly: 1}},
             {text: "Nein",
@@ -64,7 +64,7 @@ const fragen = [
         ]
      },
      {frage: "Welches dieser Gemüsesorten magst du am meisten?",
-        antwort: [
+        antworten: [
             {text: "Karotten",
                 points: {Poppy: 1}},
             {text: "Fenchel",
@@ -74,7 +74,7 @@ const fragen = [
         ]
      },
      {frage: "Was machst du, wenn du ein Problem hast?",
-        antwort: [
+        antworten: [
             {text: "Ich verstecke mich, damit keiner merkt, dass ich ein Problem habe.",
                 points: {Oakley: 1, Lily: 1}},
             {text: "Ich hole mir bei einem Freund / einer Freundin Hilfe.",
@@ -88,7 +88,7 @@ const fragen = [
         ]
      },
      {frage: "Bist du eine sportliche Person?",
-        antwort: [
+        antworten: [
             {text: "Ja",
                 points: {Hazel: 2, Ella: 2, Holly: 1}},
             {text: "Ich bin davon überzeugt, aber es stimmt wahrscheinlich nicht.",
@@ -98,7 +98,7 @@ const fragen = [
         ]
      },
      {frage: "Was machst du, wenn es jemandem in deinem Umfeld nicht so gut geht?",
-        antwort: [
+        antworten: [
             {text: "Ich gehe zu Ihnen und bleibe stets an ihrer Seite, damit sie wiessen das ich für sie da bin.",
                 points: {Emma: 3, Columbus: 2, Poppy: 1}},
             {text: "Ich lasse sie in Ruhe, damit sie etwas Zeit für sich haben können.",
@@ -122,3 +122,51 @@ let scores = {
     Phoebe: 0,
     Poppy: 0
 };
+
+let aktuelleFrage = 0;
+
+function ResultatAnzeigen(){
+    const quiz = document.getElementById("quizjs");
+    quiz.innerHTML = ""; 
+    let bestType = "";
+    let bestScore = 0;
+
+    for (let type in scores){
+        if (scores[type] > bestScore){
+            bestScore = scores[type];
+            bestType = type;
+        }
+    }
+    let resultText = document.createElement("h3");
+    resultText.textContent = "Du bist: " + bestType;
+    quiz.appendChild(resultText);
+}
+
+
+function FrageAnzeigen () {
+    const quiz = document.getElementById("quizjs");
+    quiz.innerHTML = "";
+    let f = fragen[aktuelleFrage];
+    let frageEl = document.createElement("h3");
+    frageEl.textContent = f.frage;
+    quiz.appendChild(frageEl);
+    f.antworten.forEach(antwort => {
+        const btn = document.createElement("button");
+        btn.textContent = antwort.text;
+        btn.onclick = () => {
+            for (let type in antwort.points) {
+                scores[type] += antwort.points[type];
+            }
+            aktuelleFrage++; 
+            if (aktuelleFrage < fragen.length) {
+                FrageAnzeigen();
+            } else {
+                ResultatAnzeigen();
+
+            }
+        };
+        quiz.appendChild(btn);
+
+    });
+}
+FrageAnzeigen();
