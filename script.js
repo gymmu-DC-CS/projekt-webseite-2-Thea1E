@@ -128,17 +128,24 @@ let aktuelleFrage = 0;
 function ResultatAnzeigen(){
     const quiz = document.getElementById("quizjs");
     quiz.innerHTML = ""; 
-    let bestType = "";
-    let bestScore = 0;
+    let bestType = [];
+    let bestScore = -1;
 
     for (let type in scores){
         if (scores[type] > bestScore){
             bestScore = scores[type];
-            bestType = type;
+            bestType = [type];
+        }
+        else if (scores[type] === bestScore){
+            bestType.push(type);
         }
     }
     let resultText = document.createElement("h3");
-    resultText.textContent = "Du bist: " + bestType;
+    if(bestType.length === 1){
+        resultText.textContent = "Du bist: " + bestType[0];
+    } else {
+        resultText.textContent = "Du bist entweder: " + bestType.join(" oder ")
+    }
     quiz.appendChild(resultText);
 }
 

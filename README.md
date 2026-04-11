@@ -156,3 +156,31 @@ function showResult() {
   const quiz = document.getElementById("quiz");
 Dabei habe ich jeweils immer die Id auf "quizjs" umgeändert, weil das meine Id im HTML war.
 
+Als nächstes habe ich einen Code geschrieben für den Fall eines Gleichstands. Dafür hat mir ChatGPT diesen Codeabschnitt vorgeschlagen, die wichtigen Teilde davon, habe ich dann in meinen Codeblock zu der Funktion ReusltatAnzeigen hinzugefügt.
+function ResultatAnzeigen(){
+    const quiz = document.getElementById("quizjs");
+    quiz.innerHTML = ""; 
+
+    let bestType = [];
+    let bestScore = -1; 
+
+    for (let type in scores){
+        if (scores[type] > bestScore){
+            bestScore = scores[type];
+            bestType = [type];
+        }
+        else if (scores[type] === bestScore){
+            bestType.push(type);
+        }
+    }
+
+    let resultText = document.createElement("h3");
+
+    if(bestType.length === 1){
+        resultText.textContent = "Du bist: " + bestType[0];
+    } else {
+        resultText.textContent = "Du bist entweder: " + bestType.join(" oder ");
+    }
+
+    quiz.appendChild(resultText);
+}
