@@ -44,7 +44,7 @@ Der erste Teil war für ins html:
 </body>
 </html>
 Er hat mir das vogeshlagen, bis und mit dem <body>, stand alles sowieso schon in meinem html und ich konnte es daher auslassen. Ich habe dann die headings angpasst (z.B. aus h1 h2 gemacht) und auch herausgefunden, das der Button (der er mir vorgeschlagen hat zu programmieren) gebraucht wird um auf zur nächsten Frage weiterzuklicken, da ich aber wollte, das es automatisch weitergeht, habe ich den im html weggelassen und musste dafür später ein Teil im javascript umänderen (Chatgpt hat mir dafür auch den Code gegeben).
-Als nächstes habe ich die Fragen und die Punkte der jeweiligen Antworten programmiert. Daüfr habe ich diese zwei Codeabschnitte kombiniert und angepasst:
+Als nächstes habe ich die Fragen und die Punkte der jeweiligen Antworten programmiert. Daüfr habe ich diese zwei Codeabschnitte kombiniert und angepasst. Meine Quizfragen habe ich selber erfunden und habe geschaut, dass jeder Charakter insgesamt 8 Punkte erreichen könnte, damit das Quiz ungefähr fair ist. Allerdings ist das sehr schweirig und auch wenn jeder Charakter nur maximal 8 Punkte erzielen kann, ist die Wahrscheinlichkeit ein gewisses Meerschweinchen zu bekommen leider nicht bei allen gleich hoch, weil es sehr schweirig ist ein quiz, das mit ihren Eigenschaften übereinstimmt, zu erfinden. ALlerdings habe ich das quiz später ausprobiert und festgestellt, dass wenn man die Eigenschaften von z.B. Columbus hat, man auch wirklich auf Columbus kommt - daher funktioniert das Quiz und man kann herausfinden, welches Meerschweinchen man ist, auch wenn das Quiz nicht perfekt ist.:
 const questions = [
   {
     question: "Was machst du am liebsten?",
