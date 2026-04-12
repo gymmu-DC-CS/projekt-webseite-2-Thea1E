@@ -177,3 +177,21 @@ function FrageAnzeigen () {
     });
 }
 FrageAnzeigen();
+
+function resetQuiz () {
+    aktuelleFrage = 0;
+
+    for (let type in scores){
+        scores[type] = 0;
+    }
+
+    FrageAnzeigen();
+}
+
+
+const resetBtn = document.createElement ("button");
+resetBtn.textContent = "Zurücksetzten";
+resetBtn.onclick = () => {
+    resetQuiz();
+};
+quiz.appendChild(resetBtn);

@@ -184,3 +184,27 @@ function ResultatAnzeigen(){
 
     quiz.appendChild(resultText);
 }
+
+Am Schluss habe ich dann noch einen Button erstellt um das Quiz zurückzuseetzen, damit man ihn auch mehrmals machen kann ohne die Seite jedes mal neu laden zu müssen. Dafür habe ich mich an diesem Code von ChatGPT orientiert:
+
+function resetQuiz() {
+  currentQuestion = 0;
+
+
+  for (let type in scores) {
+    scores[type] = 0;
+  }
+
+  showQuestion();
+}
+
+
+const resetBtn = document.createElement("button");
+
+resetBtn.textContent = "Nochmal machen";
+
+resetBtn.onclick = () => {
+  resetQuiz();
+};
+
+quiz.appendChild(resetBtn);
