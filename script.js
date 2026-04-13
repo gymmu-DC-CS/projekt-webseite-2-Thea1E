@@ -190,7 +190,8 @@ function resetQuiz () {
 
 
 const resetBtn = document.createElement ("button");
-resetBtn.textContent = "Zurücksetzten";
+resetBtn.textContent = "Zurücksetzen";
+resetBtn.classList.add("reset-btn");
 resetBtn.onclick = () => {
     resetQuiz();
 };

@@ -208,3 +208,14 @@ resetBtn.onclick = () => {
 };
 
 quiz.appendChild(resetBtn);
+
+
+
+
+Fürs CSS habe ich zuerst die Verlinkung mit dem HTML gemacht. Ich habe die Codezeile dafür im Internet gefunden.
+ <link rel="stylesheet" href="stylesheet.css">
+ Webseite: https://www.ionos.de/digitalguide/websites/webdesign/css-in-html-einbinden/
+
+Für das CSS im ganzen habe ich viel mit meinen Notizen von den Lektionen, die wir in der Schule zu KhanAcademy geschaut haben, gearbeitet und auch mit der folgenden Webseite: 
+https://www.w3schools.com/css/default.asp
+
