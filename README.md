@@ -219,3 +219,13 @@ Fürs CSS habe ich zuerst die Verlinkung mit dem HTML gemacht. Ich habe die Code
 Für das CSS im ganzen habe ich viel mit meinen Notizen von den Lektionen, die wir in der Schule zu KhanAcademy geschaut haben, gearbeitet und auch mit der folgenden Webseite: 
 https://www.w3schools.com/css/default.asp
 
+Um die Buttons programmieren zu können, musste ich im javascript einige classes erstellen, dabei hat mir diese Codezeil von ChatGpt geholfen:
+resetBtn.classList.add("reset-btn");
+
+Um den Buttons und den Fragen ein besseres Layout geben zu können, musste ich auch noch diesen Abschnitt hinzufügen. Da ich auf der w3schools webseite leider nichts dazu gefunden habe, habe ich auhc hier ChatGPT gefragt, der mir idesen Codeabschnitt wiedergab:
+#quizjs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}

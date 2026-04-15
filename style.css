@@ -22,3 +22,26 @@ th, td {
 th {
     font-size: 25px;
 }
+
+
+.reset-btn{
+    background-color: rgb(149, 214, 236);
+    font-size: 13px;
+    border: 1px solid rgb(0, 0, 0);
+    margin-top: 20px;
+}
+
+.antwort-btn{
+    background-color:rgb(255, 255, 255) ;
+    font-size: 15px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 500px;
+    padding: 10px;
+}
+
+#quizjs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}

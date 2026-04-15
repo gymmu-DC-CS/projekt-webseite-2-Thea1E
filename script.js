@@ -160,6 +160,7 @@ function FrageAnzeigen () {
     f.antworten.forEach(antwort => {
         const btn = document.createElement("button");
         btn.textContent = antwort.text;
+        btn.classList.add("antwort-btn");
         btn.onclick = () => {
             for (let type in antwort.points) {
                 scores[type] += antwort.points[type];
