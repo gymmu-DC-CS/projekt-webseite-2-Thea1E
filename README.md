@@ -12,7 +12,9 @@ Ich möchte...
 Quellen:
 Informationen (reine Fakten der Webseite):
 https://www.meerschweinchen-ratgeber.de/
-Selbstgeschriebener Text für die Webseit von ChatGpt auf Rechtschreibung, Grammatik und Verständlichkeit korrigieren lassen.
+https://www.tierchenwelt.de/nagetiere/1039-meerschweinchen.html#:~:text=Table_title:%20Steckbrief%20Meerschweinchen%20Table_content:%20header:%20%7C%20Gr%C3%B6%C3%9Fe,Feinde%20%7C%2020%2D35%20cm:%20W%C3%B6lfe%2C%20Schlangen%20%7C 
+
+Selbstgeschriebener Text für die Webseite wurde von ChatGpt auf Rechtschreibung, Grammatik und Verständlichkeit korrigieren lassen.
 
 Programmieren:
 Prompt an Chatgpt um die Idee des Meerschweinchentest realistisch zu überprüfen:

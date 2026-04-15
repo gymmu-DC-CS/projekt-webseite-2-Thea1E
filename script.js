@@ -15,7 +15,7 @@ const fragen = [
                 points:{}}
         ]
     },
-    {frage: "In der eigenen Welt sein",
+    {frage: "Bist du manchmal etwas verträumt?",
         antworten: [
             {text: "Ja",
                 points: {Lily: 1, Mopsy: 2, Oakley:1, Phoebe: 1}},
@@ -99,7 +99,7 @@ const fragen = [
      },
      {frage: "Was machst du, wenn es jemandem in deinem Umfeld nicht so gut geht?",
         antworten: [
-            {text: "Ich gehe zu Ihnen und bleibe stets an ihrer Seite, damit sie wiessen das ich für sie da bin.",
+            {text: "Ich gehe zu Ihnen und bleibe stets an ihrer Seite, damit sie wissen das ich für sie da bin.",
                 points: {Emma: 3, Columbus: 2, Poppy: 1}},
             {text: "Ich lasse sie in Ruhe, damit sie etwas Zeit für sich haben können.",
                 points: {Phoebe: 1}},
