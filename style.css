@@ -8,6 +8,11 @@ font-size: 18px;}
 h2 {color: rgba(95, 59, 56, 1.0);
 font: 33px "papyrus", fantasy;}
 
+h1{
+    color: rgba(103, 201, 226, 0.8);
+    font: 70px "copperplate", fantasy;
+    text-align: center;
+}
 
 table, th, td {
     border: 1px solid;
@@ -66,3 +71,4 @@ th {
 .Rassen h4{
     margin: 0;
 }
+
