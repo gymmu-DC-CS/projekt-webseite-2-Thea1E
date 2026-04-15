@@ -147,6 +147,13 @@ function ResultatAnzeigen(){
         resultText.textContent = "Du bist entweder: " + bestType.join(" oder ")
     }
     quiz.appendChild(resultText);
+    const resetBtn = document.createElement ("button");
+resetBtn.textContent = "Zurücksetzen";
+resetBtn.classList.add("reset-btn");
+resetBtn.onclick = () => {
+    resetQuiz();
+};
+quiz.appendChild(resetBtn);
 }
 
 
@@ -176,6 +183,13 @@ function FrageAnzeigen () {
         quiz.appendChild(btn);
 
     });
+    const resetBtn = document.createElement ("button");
+resetBtn.textContent = "Zurücksetzen";
+resetBtn.classList.add("reset-btn");
+resetBtn.onclick = () => {
+    resetQuiz();
+};
+quiz.appendChild(resetBtn);
 }
 FrageAnzeigen();
 
@@ -188,12 +202,3 @@ function resetQuiz () {
 
     FrageAnzeigen();
 }
-
-
-const resetBtn = document.createElement ("button");
-resetBtn.textContent = "Zurücksetzen";
-resetBtn.classList.add("reset-btn");
-resetBtn.onclick = () => {
-    resetQuiz();
-};
-quiz.appendChild(resetBtn);

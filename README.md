@@ -229,3 +229,5 @@ Um den Buttons und den Fragen ein besseres Layout geben zu können, musste ich a
   align-items: center;
   gap: 10px;
 }
+
+Als nächstes musste ich die Position des "Zurücksetzen"-buttons ändern, weil dieser immer zwischen dem Titel und dem Quiz und nicht unter dem Quiz auftauchte. Ich habe ChatGPT gefragt woran das liegt und wei man das korrigiert und er hat mir erklärt, dass an der Position des reset-btn im Java Script lag. Dieser musste ich nämlich direkt im Abschnitt zum FrageAnzeigen und auch im ResultatAnzegien reinschreiben. Nach diesen Verbesserungen hat das Layout dann gestummen.
