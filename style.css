@@ -45,3 +45,24 @@ th {
     align-items: center;
     gap: 10px;
 }
+
+
+.float-img{
+    float: right;
+}
+
+.Rassen{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    margin: 15px 0;
+}
+.Rassen img{
+    width: 180px;
+    height:130px;
+    object-fit: cover;
+}
+.Rassen h4{
+    margin: 0;
+}

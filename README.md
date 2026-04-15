@@ -211,6 +211,7 @@ quiz.appendChild(resetBtn);
 
 
 
+CSS:
 
 Fürs CSS habe ich zuerst die Verlinkung mit dem HTML gemacht. Ich habe die Codezeile dafür im Internet gefunden.
  <link rel="stylesheet" href="stylesheet.css">
@@ -231,3 +232,31 @@ Um den Buttons und den Fragen ein besseres Layout geben zu können, musste ich a
 }
 
 Als nächstes musste ich die Position des "Zurücksetzen"-buttons ändern, weil dieser immer zwischen dem Titel und dem Quiz und nicht unter dem Quiz auftauchte. Ich habe ChatGPT gefragt woran das liegt und wei man das korrigiert und er hat mir erklärt, dass an der Position des reset-btn im Java Script lag. Dieser musste ich nämlich direkt im Abschnitt zum FrageAnzeigen und auch im ResultatAnzegien reinschreiben. Nach diesen Verbesserungen hat das Layout dann gestummen.
+
+Für das Layout des Abschnitts Rassen habe ich dann mit der Hilfe von ChatGPT für jede Rasse einen <div>-container erstellt, damit das Bild und der Text jeder Rasse schön nebeneinander ist. Dabei musste in diesem <div>-container jeweils das Bild un ein weiter <div>-container für den Text eingefügt werden. Ich habe für die Erstellung der <div>-containers mit diesm Code von ChatGPT gearbeitet:
+<div class="race">
+    <img src="bild.jpg">
+    <div class="text">
+        <h3>Glatthaar</h3>
+        <p>Beschreibung...</p>
+    </div>
+</div>
+Ins CSS musste dann jeweils ein Code für den Container (als Ganzes), das Bild und den Titel eingefügt werden. Hier habe wiederum auch wieder mit von ChatGPT geschriebenen Code gearbeitet:
+.race img {
+    width: 180px;
+    height: 130px;
+    object-fit: cover;   /* verhindert Verzerrung */
+    border-radius: 10px;
+}
+
+.race img {
+    width: 180px;
+    height: 130px;
+    object-fit: cover;   /* verhindert Verzerrung */
+    border-radius: 10px;
+}
+--> Ich habe für beide Codeabschnitte border-raidus weggelassen, weil ich keine runden Ecken haben wollte.
+
+.race h3 {
+    margin: 0;
+}
